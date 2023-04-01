@@ -3,10 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodels="clr-namespace:HashMate.Client.UI.ViewModels"
+        xmlns:views="clr-namespace:HashMate.Client.UI.Views"
         xmlns:local="clr-namespace:HashMate.Client.UI"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
+    <Window.DataContext>
+        <viewmodels:MainViewModel/>
+    </Window.DataContext>
+    
     <Grid>
+        <TabControl>
+            <TabItem Header="Text to Hash">
+                <ContentControl Content="{Binding TextToHashViewModel}"/>
+            </TabItem>
+            <TabItem Header="File to Hash">
+                <ContentControl Content="{Binding FileToHashViewModel}"/>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </Window>

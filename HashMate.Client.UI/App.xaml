@@ -2,8 +2,15 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:HashMate.Client.UI"
+             xmlns:viewmodels="clr-namespace:HashMate.Client.UI.ViewModels"
+             xmlns:views="clr-namespace:HashMate.Client.UI.Views"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <DataTemplate DataType="{x:Type viewmodels:TextToHashViewModel}">
+            <views:TextToHashView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type viewmodels:FileToHashViewModel}">
+            <views:FileToHashView />
+        </DataTemplate>
     </Application.Resources>
 </Application>
