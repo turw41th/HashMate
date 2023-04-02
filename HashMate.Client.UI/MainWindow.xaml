@@ -7,13 +7,18 @@
         xmlns:views="clr-namespace:HashMate.Client.UI.Views"
         xmlns:local="clr-namespace:HashMate.Client.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="600" Width="450" MinHeight="600" MinWidth="450">
 
     <Window.DataContext>
         <viewmodels:MainViewModel/>
     </Window.DataContext>
     
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="35"/>
+        </Grid.RowDefinitions>
+        
         <TabControl>
             <TabItem Header="Text to Hash">
                 <ContentControl Content="{Binding TextToHashViewModel}"/>
@@ -22,6 +27,9 @@
                 <ContentControl Content="{Binding FileToHashViewModel}"/>
             </TabItem>
         </TabControl>
+        
+        <Button Grid.Row="1" Margin="5" Width="100" HorizontalAlignment="Right" Content="Get Hashes">
 
+        </Button>
     </Grid>
 </Window>
