@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using HashMate.Access.Interface;
+using System;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using HashMate.Access.Interface;
 
 namespace HashMate.Client.UI
 {
@@ -15,11 +11,13 @@ namespace HashMate.Client.UI
 
         public HashingManagerAccess()
         {
-            
+            Assembly assembly = Assembly.LoadFrom(Path.GetFullPath("HashMate.Manager.Service"));
+            Type type = assembly.GetType("HashMate.Manager.Service.TextHashingManager");
+            object instance = Activator.CreateInstance(type);
+
+            TextHashingManager = (ITextHashingManager)instance;
         }
     }
 
-    internal class AssemblyAccessor
-    {
-    }
+    
 }
