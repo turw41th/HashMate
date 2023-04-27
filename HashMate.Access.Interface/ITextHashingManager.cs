@@ -1,9 +1,9 @@
 ﻿namespace HashMate.Access.Interface
 {
-    interface IHashEngineAccess
+    interface ITextHashingManager
     {
         public bool Initialize(Dictionary<string, string> config);
 
-        public Dictionary<string, string> GetHash(string clearText);
+        public Dictionary<string, string> GetHashFromText(string clearText);
     }
 }
