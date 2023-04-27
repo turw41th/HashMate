@@ -5,7 +5,9 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashMate.Client.UI", "HashMate.Client.UI\HashMate.Client.UI.csproj", "{A72AF2E5-466B-41D0-9B7D-E9EAAA0DB618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashMate.Access.Interface", "HashMate.Access.Interface\HashMate.Access.Interface.csproj", "{237B33B0-E127-434C-ABF1-8B0D05F0E9BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashMate.Access.Interface", "HashMate.Access.Interface\HashMate.Access.Interface.csproj", "{237B33B0-E127-434C-ABF1-8B0D05F0E9BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashMate.Manager.Service", "HashMate.Manager.Service\HashMate.Manager.Service.csproj", "{C7A4A31B-F617-4C7D-B733-A4A895FFF88C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{237B33B0-E127-434C-ABF1-8B0D05F0E9BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237B33B0-E127-434C-ABF1-8B0D05F0E9BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{237B33B0-E127-434C-ABF1-8B0D05F0E9BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7A4A31B-F617-4C7D-B733-A4A895FFF88C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7A4A31B-F617-4C7D-B733-A4A895FFF88C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7A4A31B-F617-4C7D-B733-A4A895FFF88C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7A4A31B-F617-4C7D-B733-A4A895FFF88C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

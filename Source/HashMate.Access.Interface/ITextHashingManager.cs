@@ -1,6 +1,6 @@
 ﻿namespace HashMate.Access.Interface
 {
-    interface ITextHashingManager
+    public interface ITextHashingManager
     {
         public bool Initialize(Dictionary<string, string> config);
 
