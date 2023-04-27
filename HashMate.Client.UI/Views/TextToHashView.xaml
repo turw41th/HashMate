@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HashMate.Client.UI.Views"
+             xmlns:viewmodels="clr-namespace:HashMate.Client.UI.ViewModels"
+             d:DataContext="{d:DesignInstance Type=viewmodels:TextToHashViewModel}"
              mc:Ignorable="d" 
              Background="White">
     <Grid>
@@ -13,17 +15,27 @@
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Vertical" Margin="5">
                     <Label Content="Input text"/>
-                    <TextBox IsReadOnly="False" TextWrapping="Wrap" MinHeight="50" MaxHeight="150" VerticalScrollBarVisibility="Auto"/>
+                    <TextBox Text="{Binding PlainText}" IsReadOnly="False" TextWrapping="Wrap" MinHeight="50" MaxHeight="150" VerticalScrollBarVisibility="Auto"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="5">
                     <Label Content="MD5"/>
-                    <TextBox IsReadOnly="True"/>
+                    <TextBox Text="{Binding HashedSHA1}" IsReadOnly="True"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="5">
                     <Label Content="SHA-1"/>
-                    <TextBox IsReadOnly="True"/>
+                    <TextBox Text="{Binding HashedSHA1}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Label Content="SHA-2 (256bit)"/>
+                    <TextBox Text="{Binding HashedSHA2}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Label Content="SHA-3 (256bit)"/>
+                    <TextBox Text="{Binding HashedSHA3}" IsReadOnly="True"/>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>
