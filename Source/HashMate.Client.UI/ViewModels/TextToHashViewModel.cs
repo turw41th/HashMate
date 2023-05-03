@@ -34,7 +34,7 @@ namespace HashMate.Client.UI.ViewModels
             access = new HashingManagerAccess();
         }
 
-        private void OnHashButtonClicked(object o)
+        public void OnHashButtonClicked(object o)
         {
             string clearText = PlainText;
             if (string.IsNullOrWhiteSpace(clearText)) return;
