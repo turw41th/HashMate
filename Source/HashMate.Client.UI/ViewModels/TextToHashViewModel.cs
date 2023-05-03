@@ -1,10 +1,6 @@
 ﻿using HashMate.Access.Interface;
 using HashMate.Client.UI.Utilities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HashMate.Client.UI.ViewModels
 {
@@ -24,14 +20,12 @@ namespace HashMate.Client.UI.ViewModels
         public string HashedSHA2 { get => hashedSHA2; set => SetProperty(ref hashedSHA2, value); }
         public string HashedSHA3 { get => hashedSHA3; set => SetProperty(ref hashedSHA3, value); }
 
-        public MyICommand HashButtonClickCommand { get; set; }
-
-
 
         public TextToHashViewModel()
         {
-            HashButtonClickCommand = new MyICommand(OnHashButtonClicked);
             access = new HashingManagerAccess();
+
+            access.Initialize(new Dictionary<string, string>());
         }
 
         public void OnHashButtonClicked(object o)

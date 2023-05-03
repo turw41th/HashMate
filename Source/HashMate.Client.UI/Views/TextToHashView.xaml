@@ -20,7 +20,7 @@
 
                 <StackPanel Orientation="Vertical" Margin="5">
                     <Label Content="MD5"/>
-                    <TextBox Text="{Binding HashedSHA1}" IsReadOnly="True"/>
+                    <TextBox Text="{Binding HashedMD5}" IsReadOnly="True"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="5">

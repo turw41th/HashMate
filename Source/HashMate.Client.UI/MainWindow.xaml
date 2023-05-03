@@ -7,7 +7,7 @@
         xmlns:views="clr-namespace:HashMate.Client.UI.Views"
         xmlns:local="clr-namespace:HashMate.Client.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="450" MinHeight="600" MinWidth="450">
+        Title="HashMate" Height="600" Width="450" MinHeight="600" MinWidth="450">
 
     <Window.DataContext>
         <viewmodels:MainViewModel/>
@@ -28,7 +28,7 @@
             </TabItem>
         </TabControl>
         
-        <Button Grid.Row="1" Margin="5" Width="100" HorizontalAlignment="Right" Content="Get Hashes">
+        <Button Command="{Binding HashButtonClickCommand}" Grid.Row="1" Margin="5" Width="100" HorizontalAlignment="Right" Content="Get Hashes">
 
         </Button>
     </Grid>

@@ -1,9 +1,4 @@
 ﻿using HashMate.Client.UI.Utilities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HashMate.Client.UI.ViewModels
 {
@@ -15,10 +10,14 @@ namespace HashMate.Client.UI.ViewModels
         public TextToHashViewModel TextToHashViewModel { get; set; }
         public FileToHashViewModel FileToHashViewModel { get; set; }
 
+        public MyICommand HashButtonClickCommand { get; set; }
+
         public MainViewModel()
         {
             TextToHashViewModel = new TextToHashViewModel();
             FileToHashViewModel = new FileToHashViewModel();
+
+            HashButtonClickCommand = new MyICommand(TextToHashViewModel.OnHashButtonClicked);
         }
     }
 }
