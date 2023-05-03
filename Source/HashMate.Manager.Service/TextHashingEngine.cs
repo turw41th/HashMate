@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Runtime.Intrinsics.Arm;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace HashMate.Manager.Service
 {
@@ -11,7 +8,7 @@ namespace HashMate.Manager.Service
     {
         public TextHashingEngine() { }
 
-        public static string GetMD5Hash(string input)
+        public string GetMD5Hash(string input)
         {
             using (MD5 md5Hash = MD5.Create())
             {
@@ -25,7 +22,7 @@ namespace HashMate.Manager.Service
             }
         }
 
-        public static string GetSHA1Hash(string input)
+        public string GetSHA1Hash(string input)
         {
             using (SHA1 sha1Hash = SHA1.Create())
             {
@@ -39,7 +36,7 @@ namespace HashMate.Manager.Service
             }
         }
 
-        public static string GetSHA256Hash(string input)
+        public string GetSHA256Hash(string input)
         {
             using (SHA256 sha256Hash = SHA256.Create())
             {
@@ -52,5 +49,7 @@ namespace HashMate.Manager.Service
                 return builder.ToString();
             }
         }
+
+        
     }
 }

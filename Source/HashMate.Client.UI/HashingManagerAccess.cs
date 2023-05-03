@@ -21,7 +21,7 @@ namespace HashMate.Client.UI
             return TextHashingManager.Initialize(config);
         }
 
-        public Dictionary<string, string> GetHashFromText(string clearText)
+        public Dictionary<ContentConstants.HashAlgorithms, string> GetHashFromText(string clearText)
         {
             return TextHashingManager.GetHashFromText(clearText);
         }

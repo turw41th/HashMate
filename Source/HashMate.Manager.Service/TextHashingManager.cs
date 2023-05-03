@@ -4,14 +4,32 @@ namespace HashMate.Manager.Service
 {
     public class TextHashingManager : ITextHashingManager
     {
+        private TextHashingEngine engine;
+
         public bool Initialize(Dictionary<string, string> config)
         {
-            throw new NotImplementedException();
+            try
+            {
+                engine = new TextHashingEngine();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        public Dictionary<string, string> GetHashFromText(string clearText)
+        public Dictionary<ContentConstants.HashAlgorithms, string> GetHashFromText(string clearText)
         {
-            throw new NotImplementedException();
+            var result = new Dictionary<ContentConstants.HashAlgorithms, string>() 
+            {
+                { ContentConstants.HashAlgorithms.MD5, engine.GetMD5Hash(clearText) },
+                { ContentConstants.HashAlgorithms.SHA1, engine.GetSHA1Hash(clearText) },
+                { ContentConstants.HashAlgorithms.SHA256, engine.GetSHA256Hash(clearText) }
+            };
+
+
+            return result;
         }
     }
 }

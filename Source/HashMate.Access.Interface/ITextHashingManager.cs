@@ -4,6 +4,6 @@
     {
         public bool Initialize(Dictionary<string, string> config);
 
-        public Dictionary<string, string> GetHashFromText(string clearText);
+        public Dictionary<ContentConstants.HashAlgorithms, string> GetHashFromText(string clearText);
     }
 }

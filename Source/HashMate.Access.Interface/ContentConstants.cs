@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HashMate.Access.Interface
+﻿namespace HashMate.Access.Interface
 {
     public class ContentConstants
     {
