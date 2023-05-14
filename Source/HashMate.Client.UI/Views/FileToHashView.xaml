@@ -5,8 +5,39 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HashMate.Client.UI.Views"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800" Background="White">
-    <Grid Height="450" Width="800">
-            
+             Background="White">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Label Content="File"/>
+                    <ListBox Height="150">
+                        <ListBox.Background>
+                            <ImageBrush ImageSource="../Resources/dragdrop.png" Stretch="Uniform" AlignmentX="Center" AlignmentY="Center"/>
+                        </ListBox.Background>
+                    </ListBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Label Content="MD5"/>
+                    <TextBox Text="{Binding HashedMD5}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Label Content="SHA-1"/>
+                    <TextBox Text="{Binding HashedSHA1}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Label Content="SHA-2 (256bit)"/>
+                    <TextBox Text="{Binding HashedSHA2}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Label Content="SHA-3 (256bit)"/>
+                    <TextBox Text="{Binding HashedSHA3}" IsReadOnly="True"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>
