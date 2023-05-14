@@ -12,13 +12,8 @@
     <Window.DataContext>
         <viewmodels:MainViewModel/>
     </Window.DataContext>
-    
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="35"/>
-        </Grid.RowDefinitions>
-        
         <TabControl>
             <TabItem Header="Text to Hash">
                 <ContentControl Content="{Binding TextToHashViewModel}"/>
@@ -27,9 +22,5 @@
                 <ContentControl Content="{Binding FileToHashViewModel}"/>
             </TabItem>
         </TabControl>
-        
-        <Button Command="{Binding HashButtonClickCommand}" Grid.Row="1" Margin="5" Width="100" HorizontalAlignment="Right" Content="Get Hashes">
-
-        </Button>
     </Grid>
 </Window>

@@ -14,12 +14,19 @@ namespace HashMate.Client.UI.ViewModels
 
         private HashingManagerAccess access;
 
-        public string PlainText { get => plainText; set => SetProperty(ref plainText, value); }
+        public string PlainText 
+        { 
+            get => plainText;
+            set
+            {
+                SetProperty(ref plainText, value);
+                OnHashButtonClicked(new object());
+            }
+        }
         public string HashedMD5 { get => hashedMD5; set => SetProperty(ref hashedMD5, value); }
         public string HashedSHA1 { get => hashedSHA1; set => SetProperty(ref hashedSHA1, value); }
         public string HashedSHA2 { get => hashedSHA2; set => SetProperty(ref hashedSHA2, value); }
         public string HashedSHA3 { get => hashedSHA3; set => SetProperty(ref hashedSHA3, value); }
-
 
         public TextToHashViewModel()
         {

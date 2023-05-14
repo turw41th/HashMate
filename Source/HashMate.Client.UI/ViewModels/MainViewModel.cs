@@ -10,14 +10,10 @@ namespace HashMate.Client.UI.ViewModels
         public TextToHashViewModel TextToHashViewModel { get; set; }
         public FileToHashViewModel FileToHashViewModel { get; set; }
 
-        public MyICommand HashButtonClickCommand { get; set; }
-
         public MainViewModel()
         {
             TextToHashViewModel = new TextToHashViewModel();
             FileToHashViewModel = new FileToHashViewModel();
-
-            HashButtonClickCommand = new MyICommand(TextToHashViewModel.OnHashButtonClicked);
         }
     }
 }
