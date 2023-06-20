@@ -30,12 +30,12 @@
 
                 <StackPanel Orientation="Vertical" Margin="5">
                     <Label Content="SHA-2 (256bit)"/>
-                    <TextBox Text="{Binding HashedSHA2}" IsReadOnly="True"/>
+                    <TextBox Text="{Binding HashedSHA256}" IsReadOnly="True"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="5">
-                    <Label Content="SHA-3 (256bit)"/>
-                    <TextBox Text="{Binding HashedSHA3}" IsReadOnly="True"/>
+                    <Label Content="SHA 512bit"/>
+                    <TextBox Text="{Binding HashedSHA512}" IsReadOnly="True"/>
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

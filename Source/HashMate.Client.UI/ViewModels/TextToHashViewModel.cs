@@ -9,8 +9,8 @@ namespace HashMate.Client.UI.ViewModels
         private string plainText;
         private string hashedMD5;
         private string hashedSHA1;
-        private string hashedSHA2;
-        private string hashedSHA3;
+        private string hashedSHA256;
+        private string hashedSHA512;
 
         private HashingManagerAccess access;
 
@@ -25,8 +25,8 @@ namespace HashMate.Client.UI.ViewModels
         }
         public string HashedMD5 { get => hashedMD5; set => SetProperty(ref hashedMD5, value); }
         public string HashedSHA1 { get => hashedSHA1; set => SetProperty(ref hashedSHA1, value); }
-        public string HashedSHA2 { get => hashedSHA2; set => SetProperty(ref hashedSHA2, value); }
-        public string HashedSHA3 { get => hashedSHA3; set => SetProperty(ref hashedSHA3, value); }
+        public string HashedSHA256 { get => hashedSHA256; set => SetProperty(ref hashedSHA256, value); }
+        public string HashedSHA512 { get => hashedSHA512; set => SetProperty(ref hashedSHA512, value); }
 
         public TextToHashViewModel()
         {
@@ -49,7 +49,8 @@ namespace HashMate.Client.UI.ViewModels
         {
             HashedMD5 = args[ContentConstants.HashAlgorithms.MD5];
             HashedSHA1 = args[ContentConstants.HashAlgorithms.SHA1];
-            HashedSHA2 = args[ContentConstants.HashAlgorithms.SHA256];
+            HashedSHA256 = args[ContentConstants.HashAlgorithms.SHA256];
+            HashedSHA512 = args[ContentConstants.HashAlgorithms.SHA512];
         }
     }
 }

@@ -7,7 +7,7 @@
             MD5,
             SHA1,
             SHA256,
-            SHA3_256,
+            SHA512,
             BLAKE2,
             WHIRLPOOL,
             RIPEMD,

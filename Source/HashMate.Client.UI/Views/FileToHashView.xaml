@@ -11,7 +11,7 @@
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Vertical" Margin="5">
                     <Label Content="File"/>
-                    <ListBox Height="150">
+                    <ListBox Height="150" x:Name="dropArea" DragOver="DropArea_DragOver" DragLeave="DropArea_DragLeave">
                         <ListBox.Background>
                             <ImageBrush ImageSource="../Resources/dragdrop.png" Stretch="Uniform" AlignmentX="Center" AlignmentY="Center"/>
                         </ListBox.Background>
@@ -34,7 +34,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Vertical" Margin="5">
-                    <Label Content="SHA-3 (256bit)"/>
+                    <Label Content="SHA 512bit"/>
                     <TextBox Text="{Binding HashedSHA3}" IsReadOnly="True"/>
                 </StackPanel>
             </StackPanel>

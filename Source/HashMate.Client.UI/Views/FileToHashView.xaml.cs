@@ -24,5 +24,15 @@ namespace HashMate.Client.UI.Views
         {
             InitializeComponent();
         }
+
+        public void DropArea_DragOver(object sender, DragEventArgs args)
+        {
+            dropArea.BorderBrush = new SolidColorBrush(Colors.Red);
+        }
+
+        public void DropArea_DragLeave(object sender, DragEventArgs args)
+        {
+            dropArea.BorderBrush = new SolidColorBrush(Colors.Black);
+        }
     }
 }
