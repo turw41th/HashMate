@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "HashMate.Client.UiRework (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "HashMate.Client.UiRework (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
