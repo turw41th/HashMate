@@ -2,6 +2,8 @@
 
 HashMate is an easy way to create hash values for files and text. 
 
+You will find the most recent version in the "develop" branch.
+
 ## Naming
 The name for this project has its origin in the following conversation I had with GPT-4:
 
