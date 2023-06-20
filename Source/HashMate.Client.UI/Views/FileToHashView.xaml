@@ -11,7 +11,7 @@
             <StackPanel Orientation="Vertical">
                 <StackPanel Orientation="Vertical" Margin="5">
                     <Label Content="File"/>
-                    <ListBox Height="150" x:Name="dropArea" DragOver="DropArea_DragOver" DragLeave="DropArea_DragLeave">
+                    <ListBox Height="150" x:Name="dropArea" DragOver="DropArea_DragOver" DragLeave="DropArea_DragLeave" AllowDrop="True">
                         <ListBox.Background>
                             <ImageBrush ImageSource="../Resources/dragdrop.png" Stretch="Uniform" AlignmentX="Center" AlignmentY="Center"/>
                         </ListBox.Background>
