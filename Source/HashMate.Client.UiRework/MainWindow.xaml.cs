@@ -25,9 +25,18 @@ namespace HashMate.Client.UiRework
     /// </summary>
     public sealed partial class MainWindow : Window
     {
+        private Dictionary<string, Page> _pageInstances = new Dictionary<string, Page>();
         public MainWindow()
         {
             this.InitializeComponent();
+            this.AppWindow.Resize(new Windows.Graphics.SizeInt32(550, 750));
+
+            _pageInstances["TextToHash"] = new TextToHashView();
+            _pageInstances["FileToHash"] = new FileToHashView();
+
+            navigationView.SelectedItem = navigationView.MenuItems.OfType<NavigationViewItem>().First(item => (string)item.Tag == "TextToHash");
+
+            contentFrame.Content = _pageInstances["TextToHash"];
         }
 
         private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
@@ -35,14 +44,9 @@ namespace HashMate.Client.UiRework
             var selectedItem = (NavigationViewItem)args.SelectedItem;
             string pageTag = selectedItem.Tag.ToString();
 
-            switch (pageTag)
+            if (_pageInstances.ContainsKey(pageTag))
             {
-                case "TextToHash":
-                    contentFrame.Navigate(typeof(TextToHashView));
-                    break;
-                case "FileToHash":
-                    contentFrame.Navigate(typeof(FileToHashView));
-                    break;
+                contentFrame.Content = _pageInstances[pageTag];
             }
         }
     }
