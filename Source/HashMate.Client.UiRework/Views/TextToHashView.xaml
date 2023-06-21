@@ -6,10 +6,41 @@
     xmlns:local="using:HashMate.Client.UiRework.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:HashMate.Client.UiRework.ViewModels"
+    d:DataContext="{d:DesignInstance Type=viewmodels:TextToHashViewModel}"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
 
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="Input text"/>
+                    <TextBox Text="{Binding PlainText, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="False" TextWrapping="Wrap" MinHeight="50" MaxHeight="150"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="MD5"/>
+                    <TextBox Text="{Binding HashedMD5}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="SHA-1"/>
+                    <TextBox Text="{Binding HashedSHA1}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="SHA-2 (256bit)"/>
+                    <TextBox Text="{Binding HashedSHA256}" IsReadOnly="True"/>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <TextBlock Text="SHA 512bit"/>
+                    <TextBox Text="{Binding HashedSHA512}" IsReadOnly="True"/>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        
     </Grid>
 </Page>

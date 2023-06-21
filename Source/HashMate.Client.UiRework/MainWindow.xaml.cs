@@ -1,3 +1,4 @@
+using HashMate.Client.UiRework.Views;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -10,6 +11,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Enumeration;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 
@@ -26,6 +28,22 @@ namespace HashMate.Client.UiRework
         public MainWindow()
         {
             this.InitializeComponent();
+        }
+
+        private void NavigationView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            var selectedItem = (NavigationViewItem)args.SelectedItem;
+            string pageTag = selectedItem.Tag.ToString();
+
+            switch (pageTag)
+            {
+                case "TextToHash":
+                    contentFrame.Navigate(typeof(TextToHashView));
+                    break;
+                case "FileToHash":
+                    contentFrame.Navigate(typeof(FileToHashView));
+                    break;
+            }
         }
     }
 }

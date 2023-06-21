@@ -13,16 +13,13 @@
         <Grid.DataContext>
             <viewmodels:MainViewModel/>
         </Grid.DataContext>
-        
-        <NavigationView IsBackButtonVisible="Collapsed" PaneDisplayMode="LeftCompact">
-            <NavigationView.MenuItems>
-                <NavigationViewItem Content="Test1">
-                    
-                </NavigationViewItem>
-                <NavigationViewItem Content="Test2">
 
-                </NavigationViewItem>
+        <NavigationView IsBackButtonVisible="Collapsed" PaneDisplayMode="LeftCompact" SelectionChanged="NavigationView_SelectionChanged">
+            <NavigationView.MenuItems>
+                <NavigationViewItem Content="Text to Hash" Tag="TextToHash" Icon="Font" />
+                <NavigationViewItem Content="File to Hash" Tag="FileToHash" Icon="OpenFile" />
             </NavigationView.MenuItems>
+            <Frame x:Name="contentFrame" />
         </NavigationView>
     </Grid>
 </Window>
